@@ -1,0 +1,201 @@
+@font-face {
+    font-family: "Rostov";
+    src: url(fonts/rostov.ttf);
+}
+
+body {
+    background-color: #D0F2E6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    max-width: 1150px;
+    margin: auto;
+    height: 100%;
+}
+
+
+/* lenta */
+
+.container .centerblock {
+    width: 100%;
+    height: auto;
+    margin-left: 25%;
+    background-color: rgb(199, 162, 0);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* end lenta */
+
+header {
+    user-select: none;
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    border-bottom: 3px solid orange;
+}
+
+.logo {
+    position: relative;
+}
+
+.logo_img img {
+    margin: 5px 0 0 5px;
+    max-width: 70px;
+}
+
+.logo a {
+    font-size: 25pt;
+    font-family: Rostov, sans-serif;
+    color: orange;
+    text-decoration: none;
+    text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+}
+
+.logo span {
+    position: absolute;
+    margin: 25px 0 0 10px;
+}
+
+.shine-button {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid orange;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: orange;
+    transition: .2s ease-in-out;
+}
+
+.shine-button:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+}
+
+.shine-button:hover {
+    background: orange;
+    color: #fff;
+    cursor: pointer;
+}
+
+.shine-button:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}
+
+
+/* Меню начало */
+
+.vertmenu {
+    margin: 0 10px;
+    font-family: 'Open Sans', sans-serif;
+    position: fixed;
+}
+
+.vertmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.vertmenu ul li {
+    position: relative;
+    margin: 0;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.vertmenu ul li li {
+    padding-left: 20px;
+}
+
+.vertmenu .subCat,
+.chka {
+    top: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+.vertmenu .subCat.plus,
+.chka:before,
+.vertmenu .subCat.minus,
+.subCat:checked+.chka:before {
+    content: '+';
+    font-size: 26px;
+    color: #1266B1;
+    font-weight: bold;
+    font-family: Courier;
+}
+
+.vertmenu .subCat.minus,
+.subCat:checked+.chka:before {
+    content: '-';
+}
+
+.vertmenu a {
+    color: #477AB9;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.vertmenu ul li li a {
+    color: rgb(0, 16, 165);
+    font-size: 15px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.vertmenu a.active {
+    color: #00B1EC;
+}
+
+.vertmenu a:hover {
+    text-decoration: none;
+    color: rgb(0, 163, 8) !important;
+}
+
+.vertmenu>ul>li ul {
+    display: none;
+}
+
+.vertmenu>ul>li a.active+span+ul {
+    display: block !important;
+}
+
+.vertmenu>ul>li .subCat:checked~ul {
+    display: block !important;
+}
+
+.vertmenu input[type=checkbox].subCat {
+    display: none;
+}
+
+.vertmenu ul li li a:before {
+    content: '\203A';
+    font-size: 20px;
+    padding-right: 6px;
+    color: rgb(248, 170, 0);
+    font-weight: bold;
+}
+
+.vertmenu>ul li li a:hover:before {
+    color: #b13f12;
+}
+
+
+/* Меню конец */

@@ -1,0 +1,182 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 415px;
+}
+
+
+/* .language {
+    position: absolute;
+    right: 0;
+    margin: 20px 0 0 0;
+} */
+
+.autho {
+    user-select: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: calc(1em + 4vw);
+    position: absolute;
+    margin: 1% 0 0 0;
+    color: #294A70;
+}
+
+.login {
+    position: relative;
+    border-top: 3px solid orange;
+    border-bottom: 3px solid orange;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-radius: 15px;
+    background-color: white;
+    width: 40%;
+    min-width: 250px;
+    max-width: 500px;
+    margin: 7% 0 0 0;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.social img {
+    max-width: 35px;
+    margin: 5px;
+}
+
+.social {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.group input {
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.group input:focus {
+    outline: none;
+}
+
+#lab-log {
+    color: #999;
+    font-size: 18px;
+    position: absolute;
+    pointer-events: none;
+    /* left: 35%; */
+    top: 15px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.group input:focus~#lab-log,
+input:valid~#lab-log {
+    top: -15px;
+    font-size: 14px;
+    color: #5264AE;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 220px;
+}
+
+.bar:before,
+.bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+.group input:focus~.bar:before,
+input:focus~.bar:after {
+    width: 50%;
+}
+
+label {
+    user-select: none;
+}
+
+.shine-button {
+    font-size: 12pt;
+    padding: 10px 30px;
+    margin: 20px 0 0 0;
+}
+
+.container-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 10px 0;
+}
+
+
+/* .reg {
+    width: 100%;
+    position: absolute;
+    left: 20px;
+    bottom: 5px;
+}
+
+.for_pass {
+    right: 0;
+}
+
+.forgot {
+    position: absolute;
+    right: 20px;s
+    bottom: 5px;
+} */
+
+.pass {
+    width: 100%;
+    padding: 0 20px 0 20px;
+    margin: 0 0 5px 0;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    bottom: 0;
+}
+
+.pass a {
+    color: #FF4500;
+}
+
+@media screen and (max-width: 875px) {
+    .pass {
+        padding: 0 0 0 20%;
+    }
+}
